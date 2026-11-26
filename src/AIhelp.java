@@ -36,7 +36,7 @@ public class AIhelp {
 
             if (choice == 1) {
                 String subject = chooseSubject(scanner);
-                String level = chooseLevel(scanner);
+                String level = chooseLevel(scanner, subject);
                 roadmap = RoadmapLibrary.getRoadmap(subject, level);
                 ProgressManager.save(roadmap);
                 roadmap.printRoadmap();
@@ -100,20 +100,23 @@ public class AIhelp {
         }
     }
 
-    private static String chooseLevel(Scanner scanner) {
+    private static String chooseLevel(Scanner scanner, String subject) {
         System.out.println();
         System.out.println("What is your experience level?");
         System.out.println("1. Beginner");
         System.out.println("2. Intermediate");
         System.out.println("3. Advanced");
-        int choice = readNumber(scanner, 1, 3);
+        System.out.println("4. Not sure? Take a quick quiz");
+        int choice = readNumber(scanner, 1, 4);
 
         if (choice == 1) {
             return "Beginner";
         } else if (choice == 2) {
             return "Intermediate";
-        } else {
+        } else if (choice == 3) {
             return "Advanced";
+        } else {
+            return LevelQuiz.suggestLevel(scanner, subject);
         }
     }
 
