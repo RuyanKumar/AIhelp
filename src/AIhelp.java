@@ -17,7 +17,11 @@ public class AIhelp {
         System.out.println("Welcome to AIhelp!");
         System.out.println("Your personal learning roadmap planner.");
 
-        Roadmap roadmap = null;
+        Roadmap roadmap = ProgressManager.load();
+        if (roadmap != null) {
+            System.out.println("Welcome back! Loaded your " + roadmap.getSubject()
+                    + " (" + roadmap.getLevel() + ") roadmap.");
+        }
         boolean running = true;
 
         while (running) {

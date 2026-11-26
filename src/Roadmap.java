@@ -85,4 +85,18 @@ public class Roadmap {
             System.out.println("Start here: " + next.getResource());
         }
     }
+
+    /**
+     * Used when loading saved progress. Matching by name instead of by position means
+     * old save files still load correctly if I reorder the topics later.
+     *
+     * @param name a topic name read from progress.txt
+     */
+    public void markCompletedByName(String name) {
+        for (Topic topic : topics) {
+            if (topic.getName().equals(name)) {
+                topic.markCompleted();
+            }
+        }
+    }
 }
