@@ -7,8 +7,6 @@
  * @author Ruyan Kumar
  */
 public class RoadmapLibrary {
-    public static final String[] SUBJECTS = {"Python", "Data Science", "AI"};
-    public static final String[] LEVELS = {"Beginner", "Intermediate", "Advanced"};
 
     /**
      * Builds the roadmap for one subject and level.
@@ -52,6 +50,65 @@ public class RoadmapLibrary {
             roadmap.addTopic("Writing clean code and sharing it on GitHub",
                     "PEP 8 style guide (peps.python.org/pep-0008) and GitHub Docs (docs.github.com)");
 
+        } else if (subject.equals("Data Science") && level.equals("Beginner")) {
+            roadmap.addTopic("Set up a notebook to write code in",
+                    "Google Colab (colab.research.google.com) or Kaggle Notebooks");
+            roadmap.addTopic("Basic statistics: mean, median, and spread",
+                    "Khan Academy: Statistics and Probability (khanacademy.org)");
+            roadmap.addTopic("Working with tables of data in pandas",
+                    "Kaggle Learn: Pandas (kaggle.com/learn)");
+            roadmap.addTopic("Making charts from data",
+                    "Kaggle Learn: Data Visualization");
+
+        } else if (subject.equals("Data Science") && level.equals("Intermediate")) {
+            roadmap.addTopic("Cleaning messy data",
+                    "Kaggle Learn: Data Cleaning");
+            roadmap.addTopic("Asking questions of a database with SQL",
+                    "Kaggle Learn: Intro to SQL");
+            roadmap.addTopic("Statistics for data science",
+                    "OpenIntro Statistics, free textbook (openintro.org)");
+            roadmap.addTopic("Explore a real dataset on your own",
+                    "Kaggle Datasets (kaggle.com/datasets)");
+
+        } else if (subject.equals("Data Science") && level.equals("Advanced")) {
+            roadmap.addTopic("Build your first machine learning model",
+                    "Kaggle Learn: Intro to Machine Learning");
+            roadmap.addTopic("Feature engineering",
+                    "Kaggle Learn: Feature Engineering");
+            roadmap.addTopic("Testing how good a model is",
+                    "scikit-learn User Guide (scikit-learn.org)");
+            roadmap.addTopic("Enter a beginner Kaggle competition",
+                    "Kaggle 'Titanic' Getting Started competition");
+
+        } else if (subject.equals("AI") && level.equals("Beginner")) {
+            roadmap.addTopic("What AI and machine learning are",
+                    "Elements of AI, free online course (elementsofai.com)");
+            roadmap.addTopic("Vectors and matrices: the math behind AI",
+                    "3Blue1Brown: Essence of Linear Algebra (YouTube)");
+            roadmap.addTopic("How a machine learning model learns",
+                    "Kaggle Learn: Intro to Machine Learning");
+            roadmap.addTopic("Using AI responsibly",
+                    "Kaggle Learn: Intro to AI Ethics");
+
+        } else if (subject.equals("AI") && level.equals("Intermediate")) {
+            roadmap.addTopic("How neural networks work",
+                    "3Blue1Brown: Neural Networks series (YouTube)");
+            roadmap.addTopic("Machine learning foundations",
+                    "Andrew Ng's Machine Learning Specialization (DeepLearning.AI)");
+            roadmap.addTopic("Build a neural network in code",
+                    "Kaggle Learn: Intro to Deep Learning");
+            roadmap.addTopic("Deep learning with PyTorch",
+                    "PyTorch Tutorials: Learn the Basics (pytorch.org/tutorials)");
+
+        } else if (subject.equals("AI") && level.equals("Advanced")) {
+            roadmap.addTopic("Practical deep learning projects",
+                    "fast.ai: Practical Deep Learning for Coders (course.fast.ai)");
+            roadmap.addTopic("Transformers and large language models",
+                    "Hugging Face courses (huggingface.co/learn)");
+            roadmap.addTopic("Build a small app that uses an AI model",
+                    "Your own idea, using models from huggingface.co");
+            roadmap.addTopic("Read research papers and join a research project",
+                    "arXiv (arxiv.org) and your university's undergraduate research office");
         } else {
             return null;
         }
