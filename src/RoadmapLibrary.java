@@ -32,6 +32,26 @@ public class RoadmapLibrary {
             roadmap.addTopic("Lists, dictionaries, and functions",
                     "Official Python Tutorial, sections 4 and 5");
 
+        } else if (subject.equals("Python") && level.equals("Intermediate")) {
+            roadmap.addTopic("Handling errors with try/except",
+                    "CS50P Lecture 3: Exceptions");
+            roadmap.addTopic("Using libraries and pip",
+                    "CS50P Lecture 4: Libraries");
+            roadmap.addTopic("Reading and writing files",
+                    "CS50P Lecture 6: File I/O");
+            roadmap.addTopic("Classes and objects",
+                    "CS50P Lecture 8: Object-Oriented Programming");
+
+        } else if (subject.equals("Python") && level.equals("Advanced")) {
+            roadmap.addTopic("Testing your code with unit tests",
+                    "CS50P Lecture 5: Unit Tests");
+            roadmap.addTopic("Regular expressions",
+                    "CS50P Lecture 7: Regular Expressions");
+            roadmap.addTopic("Getting data from web APIs as JSON",
+                    "Requests library quickstart (requests.readthedocs.io)");
+            roadmap.addTopic("Writing clean code and sharing it on GitHub",
+                    "PEP 8 style guide (peps.python.org/pep-0008) and GitHub Docs (docs.github.com)");
+
         } else {
             return null;
         }
