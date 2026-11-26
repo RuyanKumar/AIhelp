@@ -34,6 +34,7 @@ public class AIhelp {
                 String subject = chooseSubject(scanner);
                 String level = chooseLevel(scanner);
                 roadmap = RoadmapLibrary.getRoadmap(subject, level);
+                ProgressManager.save(roadmap);
                 roadmap.printRoadmap();
             } else if (choice == 5) {
                 System.out.println("Goodbye! Keep learning.");
