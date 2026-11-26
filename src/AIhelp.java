@@ -43,6 +43,8 @@ public class AIhelp {
                 System.out.println("You have not picked a learning path yet. Choose option 1 first.");
             } else if (choice == 2) {
                 roadmap.printRoadmap();
+            } else if (choice == 3) {
+                markTopicComplete(scanner, roadmap);
             } else {
                 System.out.println("Coming soon!");
             }
@@ -107,6 +109,23 @@ public class AIhelp {
             return "Intermediate";
         } else {
             return "Advanced";
+        }
+    }
+
+    private static void markTopicComplete(Scanner scanner, Roadmap roadmap) {
+        roadmap.printRoadmap();
+        System.out.println();
+        System.out.println("Which topic did you finish?");
+        int topicNumber = readNumber(scanner, 1, roadmap.getTopics().size());
+
+        // The student counts from 1, but the list counts from 0, so subtract 1.
+        Topic topic = roadmap.getTopics().get(topicNumber - 1);
+
+        if (topic.isCompleted()) {
+            System.out.println("You already finished that topic.");
+        } else {
+            topic.markCompleted();
+            System.out.println("Nice work! Marked \"" + topic.getName() + "\" as complete.");
         }
     }
 }
