@@ -1,0 +1,10 @@
+# IntelliJ's own settings files
+.idea/
+*.iml
+out/
+
+# Compiled Java files (Java makes these from your .java files)
+*.class
+
+# Each person's own progress file (the program creates it when it runs)
+progress.txt
