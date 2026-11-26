@@ -45,8 +45,8 @@ public class AIhelp {
                 roadmap.printRoadmap();
             } else if (choice == 3) {
                 markTopicComplete(scanner, roadmap);
-            } else {
-                System.out.println("Coming soon!");
+            } else if (choice == 4) {
+                roadmap.printProgress();
             }
         }
 
