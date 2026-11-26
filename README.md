@@ -7,6 +7,7 @@ Many students want to learn Python, Data Science, or AI. But they don't know whe
 
 ## How It Works
 ![How AIhelp works](docs/how-it-works.png)
+* **LevelQuiz.java:** asks 3 yes or no questions and suggests a level.
 
 * **AIhelp.java:** the main menu. It checks what the user types.
 * **RoadmapLibrary.java:** has all 9 learning plans.
@@ -53,7 +54,7 @@ Next up: Vectors and matrices: the math behind AI
 * [x] Mark topics as done
 * [x] See your progress
 * [x] Save your progress
-* [ ] Quiz to pick your level
+* [x] Quiz to pick your level
 * [ ] More subjects
 * [ ] Progress charts
 * [ ] Weekly goals
