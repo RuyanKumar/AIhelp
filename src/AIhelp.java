@@ -134,6 +134,7 @@ public class AIhelp {
         } else {
             topic.markCompleted();
             System.out.println("Nice work! Marked \"" + topic.getName() + "\" as complete.");
+            ProgressManager.save(roadmap);
         }
     }
 }
